@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Lucas",
+                "last": "Christensen"
+            },
+            "location": {
+                "street": {
+                    "number": 7774,
+                    "name": "Høgevej"
+                },
+                "city": "Stoevring",
+                "state": "Sjælland",
+                "country": "Denmark",
+                "postcode": 99143,
+                "coordinates": {
+                    "latitude": "-41.9629",
+                    "longitude": "-159.5605"
+                },
+                "timezone": {
+                    "offset": "+5:45",
+                    "description": "Kathmandu"
+                }
+            },
+            "email": "lucas.christensen@example.com",
+            "login": {
+                "uuid": "71cc5dbf-52b9-4ab5-bb02-50c966e0440a",
+                "username": "angrycat381",
+                "password": "qian",
+                "salt": "uiRKNStn",
+                "md5": "091add510c6ec8e9c8c427181d3d8887",
+                "sha1": "92439bd0e17388290357cab83289507faa0162e6",
+                "sha256": "81c5ef4cec3ba2b2aad54b19b775015faac8d33c787472366fa95c41170caf4e"
+            },
+            "dob": {
+                "date": "1947-04-25T18:37:37.993Z",
+                "age": 75
+            },
+            "registered": {
+                "date": "2017-09-07T18:42:01.700Z",
+                "age": 5
+            },
+            "phone": "44902206",
+            "cell": "38771288",
+            "id": {
+                "name": "CPR",
+                "value": "250447-5621"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/57.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/57.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/57.jpg"
+            },
+            "nat": "DK"
+        }
+    ],
+    "info": {
+        "seed": "e07050621b8aaa1a",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}

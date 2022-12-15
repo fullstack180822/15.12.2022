@@ -73,13 +73,13 @@ const server = http.createServer(async (request, response) => {
             }
         case "/hello":
             response.setHeader("Content-Type", "text/html");
-                response.writeHead(200);
-                response.end(`<script>document.write('hello')</script>`);
-                break;
+            response.writeHead(200);
+            response.end(`<script>document.write('hello')</script>`);
+            break;
         case "/todos":
             try {
                 const data = await readfileasync(__dirname + '/todos.json')
-                response.setHeader("Content-Type", "application/json");            
+                response.setHeader("Content-Type", "application/json");
                 response.writeHead(200);
                 response.end(data);
             }
@@ -88,11 +88,35 @@ const server = http.createServer(async (request, response) => {
                 response.end(err);
                 return;
             }
-        default: 
+        case "/random":
+            try {
+                const data = await readfileasync(__dirname + '/random_user.json')
+                response.setHeader("Content-Type", "application/json");
+                response.writeHead(200);
+                response.end(data);
+            }
+            catch (err) {
+                response.writeHead(500);
+                response.end(err);
+                return;
+            }
+            case "/package.json":
+                try {
+                    const data = await readfileasync(__dirname + '/package.json')
+                    response.setHeader("Content-Type", "application/json");
+                    response.writeHead(200);
+                    response.end(data);
+                }
+                catch (err) {
+                    response.writeHead(500);
+                    response.end(err);
+                    return;
+                }            
+        default:
             response.writeHead(200);
-            response.end(`<h1> your url :<br /> ${request.url}</h1>`);            
+            response.end(`<h1> your url :<br /> ${request.url}</h1>`);
             break;
-        }
+    }
 })
 
 server.listen(port, host, () => {
